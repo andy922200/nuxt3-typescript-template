@@ -1,9 +1,7 @@
 <template>
     <div class="error-layout">
-        <main>
-            <h1>There are some Error!</h1>
-            <slot />
-        </main>
+        <h1>There are some Error!</h1>
+        <slot />
     </div>
 </template>
 
@@ -17,8 +15,4 @@ export default {
 /* import components */
 </script>
 
-<style scoped lang="scss">
-// .error-layout {
-
-// }
-</style>
+<style scoped lang="scss" src="@/assets/styles/error_layout.scss" />

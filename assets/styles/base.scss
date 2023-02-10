@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: auto !important;
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#__nuxt {
+    width: 100%;
+    height: 100vh;
+}
+
+ul {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a,
+a:hover,
+a::before {
+    text-decoration: none;
+}
