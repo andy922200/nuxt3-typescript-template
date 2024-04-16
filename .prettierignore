@@ -1,0 +1,13 @@
+.local
+.output.js
+/dist/*
+/public/*
+/build/*
+
+**/*.svg
+**/*.sh
+
+README.md
+
+/node_modules/**
+pnpm-lock.yaml

@@ -1,14 +1,14 @@
 <template>
-    <NuxtLayout>
-        <main>
-            <NuxtPage />
-        </main>
-    </NuxtLayout>
+  <NuxtLayout>
+    <main>
+      <NuxtPage />
+    </main>
+  </NuxtLayout>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'App'
+  name: 'App',
 }
 </script>
 
@@ -17,12 +17,11 @@ import { onMounted } from 'vue'
 import useStore from '@/store'
 const { app } = useStore()
 const initApp = () => {
-    app.getLanguageBasedOnBrowser()
+  app.getLanguageBasedOnBrowser()
 }
 
 onMounted(() => {
-    // avoid hydrate error between server and client
-    initApp()
+  // avoid hydrate error between server and client
+  initApp()
 })
-
 </script>

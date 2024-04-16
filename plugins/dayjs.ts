@@ -12,12 +12,17 @@ import 'dayjs/locale/zh-cn'
 import 'dayjs/locale/ja'
 import 'dayjs/locale/de'
 
-const dayjsService = dayjs
-dayjsService.extend(utc)
-dayjsService.extend(duration)
-dayjsService.extend(relativeTime)
-dayjsService.extend(isSameOrBefore)
-dayjsService.extend(isSameOrAfter)
-dayjsService.extend(isBetween)
+dayjs.extend(utc)
+dayjs.extend(duration)
+dayjs.extend(relativeTime)
+dayjs.extend(isSameOrBefore)
+dayjs.extend(isSameOrAfter)
+dayjs.extend(isBetween)
 
-export default dayjsService
+export default defineNuxtPlugin(() => {
+  return {
+    provide: {
+      dayjs: dayjs,
+    },
+  }
+})

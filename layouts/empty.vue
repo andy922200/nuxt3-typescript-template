@@ -1,12 +1,12 @@
 <template>
-    <div class="empty-layout">
-        <slot />
-    </div>
+  <div class="empty-layout">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'EmptyLayout'
+  name: 'EmptyLayout',
 }
 </script>
 
@@ -14,4 +14,4 @@ export default {
 /* import components */
 </script>
 
-<style scoped lang="scss" src="@/assets/styles/empty_layout.scss" />
+<style scoped src="@/styles/empty_layout.css" />

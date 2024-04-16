@@ -1,12 +1,12 @@
 <template>
-    <div class="default-layout">
-        <slot />
-    </div>
+  <div class="default-layout">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'DefaultLayout'
+  name: 'DefaultLayout',
 }
 </script>
 
@@ -14,4 +14,4 @@ export default {
 /* import components */
 </script>
 
-<style scoped lang="scss" src="@/assets/styles/default_layout.scss" />
+<style scoped src="@/styles/default_layout.css" />
