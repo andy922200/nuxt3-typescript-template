@@ -9,11 +9,7 @@ const generalFetchSettings: FetchOptions = {
     options.headers = {
       ...generalFetchSettings.headers,
       ...options.headers,
-    } as Record<string, string>
-
-    // if (!options.headers.permission?.includes('get-demo')) {
-    //     throw new Error('Test Permission Error')
-    // }
+    }
   },
   onRequestError: () => {
     // console.log('config on Req Error', req)

@@ -1,10 +1,22 @@
-import { resolve, dirname } from 'path'
-import { fileURLToPath } from 'url'
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-01-09',
   ssr: false,
+  modules: ['@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@nuxt/eslint'],
+  vite: {
+    plugins: [
+      VueI18nVitePlugin({
+        include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
+      }),
+    ],
+  },
+  typescript: {
+    typeCheck: true,
+  },
   app: {
     head: {
       title: 'Demo Site',
@@ -34,16 +46,5 @@ export default defineNuxtConfig({
         },
       ],
     },
-  },
-  typescript: {
-    typeCheck: true,
-  },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
-  vite: {
-    plugins: [
-      VueI18nVitePlugin({
-        include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
-      }),
-    ],
   },
 })

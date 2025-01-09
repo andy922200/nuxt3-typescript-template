@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
-import { useNuxtApp } from '#app'
-import { getLanguage } from '~/utils/mixinTools'
-import { type appState } from '~/types/store'
-import { appLangs } from '~/plugins/lang'
 
-const useAppStore = defineStore({
-  id: 'app',
+import { useNuxtApp } from '#app'
+import { appLangs } from '~/plugins/lang'
+import type { appState } from '~/types/store'
+import { getLanguage } from '~/utils/mixinTools'
+
+const useAppStore = defineStore('app', {
   state: (): appState => {
     return {
       device: 'desktop',
@@ -30,7 +30,7 @@ const useAppStore = defineStore({
     },
   },
   persist: {
-    storage: persistedState.localStorage,
+    storage: localStorage,
   },
 })
 

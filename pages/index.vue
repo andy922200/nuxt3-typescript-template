@@ -13,17 +13,19 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'Index',
-}
-</script>
+<script lang="ts"></script>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+import useStore from '@/store'
 import { demoApis } from '~/apis/demo'
 import { generateCustomHeader } from '~/utils/mixinTools'
-import useStore from '@/store'
+
+defineOptions({
+  name: 'Index',
+})
+
 useHead(generateCustomHeader({ pageName: 'Test Index Page' }))
 
 const { $dayjs } = useNuxtApp()

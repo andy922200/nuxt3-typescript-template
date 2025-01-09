@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n'
+
 import enUsLocale from '../lang/en-us'
 import zhTwLocale from '../lang/zh-tw'
 

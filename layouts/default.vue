@@ -4,14 +4,10 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'DefaultLayout',
-}
-</script>
-
 <script setup lang="ts">
-/* import components */
+defineOptions({
+  name: 'DefaultLayout',
+})
 </script>
 
 <style scoped src="@/styles/default_layout.css" />

@@ -1,11 +1,9 @@
 {
-    "editor.tabSize": 4,
     "editor.formatOnSave": false, // if you use ESlint，this should be false
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit",
         "source.fixAll.stylelint": "explicit"
     },
-    "eslint.alwaysShowStatus": true,
     "eslint.validate": [
         "javascript",
         "typescript",
@@ -16,6 +14,5 @@
     "scss.validate": false,
     "stylelint.enable": true,
     "stylelint.validate": ["css", "scss", "vue"],
-    "files.autoGuessEncoding": true
-  }
+}
   

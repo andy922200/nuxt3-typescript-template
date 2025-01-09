@@ -4,14 +4,10 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'EmptyLayout',
-}
-</script>
-
 <script setup lang="ts">
-/* import components */
+defineOptions({
+  name: 'EmptyLayout',
+})
 </script>
 
 <style scoped src="@/styles/empty_layout.css" />
